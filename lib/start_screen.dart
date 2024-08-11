@@ -4,6 +4,7 @@ class StartScreen extends StatefulWidget {
   const StartScreen(this.startQuiz, {Key? key}) : super(key: key);
 
   final void Function() startQuiz;
+
   @override
   _StartScreenState createState() => _StartScreenState();
 }
@@ -28,10 +29,18 @@ class _StartScreenState extends State<StartScreen>
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Image.asset(
-          'assets/images/car.png',
-          width: 400,
-          height: 300,
+        Expanded(
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/image0 (3).jpg'),
+                fit: BoxFit
+                    .contain, // Ensure the image fits within the container without clipping
+              ),
+            ),
+            child: SizedBox
+                .expand(), // Ensure the Container takes up the entire space
+          ),
         ),
         const SizedBox(height: 10),
         Container(
