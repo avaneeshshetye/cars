@@ -16,7 +16,7 @@ class CarsList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(0), // Remove any internal padding
-            child: cardDesign(items[index]),
+            child: CardDesign(items[index]),
           );
         },
       ),

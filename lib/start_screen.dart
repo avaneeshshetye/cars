@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+
 class StartScreen extends StatefulWidget {
   const StartScreen(this.startQuiz, {Key? key}) : super(key: key);
 
@@ -35,11 +37,10 @@ class _StartScreenState extends State<StartScreen>
               image: DecorationImage(
                 image: AssetImage('assets/images/image0 (3).jpg'),
                 fit: BoxFit
-                    .contain, // Ensure the image fits within the container without clipping
+                    .fitHeight, // Cover the space horizontally without cutting
               ),
             ),
-            child: SizedBox
-                .expand(), // Ensure the Container takes up the entire space
+            child: const SizedBox.expand(),
           ),
         ),
         const SizedBox(height: 10),
@@ -50,7 +51,6 @@ class _StartScreenState extends State<StartScreen>
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  // Blue background color
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: const Text(
                     'WELCOME TO Avaneesh\'s APP!',
@@ -68,7 +68,6 @@ class _StartScreenState extends State<StartScreen>
                   setState(() {
                     isButtonClicked = true;
                   });
-                  // Handle button click here
                   print('Button clicked!');
                 },
                 child: AnimatedBuilder(

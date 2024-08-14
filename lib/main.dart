@@ -6,6 +6,7 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       routes: {'/displayScreen': (context) => const DisplayScreen()},
       home: Cars(),
     ),
